@@ -3,7 +3,7 @@
  interface of ofBaseVideo. It uses the more traditional approach to
  capturing, which has the disadvantage of being slightly slower and
  requiring more memory -- but the advantage of being easy to swap out.
- 
+
 	ofxLibdc::Grabber camera;
 	ofImage currentFrame;
 	camera.grabFrame();
@@ -19,7 +19,7 @@
 
 namespace ofxLibdc {
 
-class Grabber : public Camera, public ofBaseVideo {
+class Grabber : public Camera, public ofBaseVideoDraws {
 public:
 	Grabber();
 	ofTexture& getTextureReference();
